@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Event Example</title>
+    <style> 
+        input {
+            border: 3px solid black; /* 기본 테두리 색상 */
+            padding: 5px; 
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <input id="focusinput" name="focusinput" placeholder="비염이 나를 죽인다">
+   
+    <script> 
+        const inputfield = document.getElementById("focusinput");
+        
+        // 기본 테두리 색상을 저장
+        const defaultBorderColor = inputfield.style.borderColor || "black";
+
+        inputfield.addEventListener("focus", function() {
+            this.style.borderColor = "green"; // 포커스 시 녹색 테두리
+        });
+
+        inputfield.addEventListener("blur", function() {
+            this.style.borderColor = defaultBorderColor; // 포커스 해제 시 원래 색상 복원
+        });
+    </script>
+</body>
+</html>

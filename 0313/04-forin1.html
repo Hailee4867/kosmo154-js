@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1 
+        const obj1 = { 
+            prop1:"속성1",
+            prop2:"속성2",
+            prop3:"속성3",
+            prop4:"속성4",
+
+        }
+
+        //순차적으로 값을출력시. 규칙성이 없으면 출력하기 어려움 그래서 for in 문법을 씀 
+
+
+        // for(key in obj1){ 
+        //     console.log(key);
+        // } 
+        // for in 문 우리가 가진 개체값을 순회해서 나오게 하는 문법임. 
+        // 근데 위에는 속성값이 아니라 // prop1~4로만 나옴. \
+
+
+
+        
+        for(key in obj1){ 
+            console.log(key);
+            console.log(obj1[key]);
+            
+        } 
+      with(obj1){ 
+        console.log(`${prop}`); 
+        console.log(`${prop1}`); 
+      }
+        
+    </script>
+</body>
+</html>

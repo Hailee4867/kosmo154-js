@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--12장-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //proto 타입은 공유가 된다. 
+        const obj1= { 
+
+            a1:123,
+            b1:"abc"
+        }
+
+        obj1.__proto__.func1= function(){
+          
+            console.log("이것은 obj1의 프로토 타입에서 선언한 함수입니다.");
+            console.log(this.a1);
+        }
+
+        obj1.func1(); 
+
+        //이상 현상 
+
+        const obj2={
+             a1: 987,
+            c1: 456
+        }
+
+        obj2.func1(); // 이것은 obj1의 프로토 타입에서 선언한 함수입니다 이게 또나옴..;
+    
+        // 위에 오브젝트에 프로토가 선언되었고...그 밑에 오브젝트도 똑같이 공유됨.
+
+   </script>
+</body>
+</html>
+
+<!-- //_proto__에서 무슨 일이 일어났나?
+기본적으로 객체는 Object.prototype을 상속받는다.
+
+obj1.__proto__는 Object.prototype을 가리키고 있음.
+obj1.__proto__.func1 = function() {...} 를 실행하면?
+
+사실상 Object.prototype.func1을 추가하는 것과 같음.
+즉, 모든 객체(obj1뿐만 아니라 다른 객체도 포함)가 func1()을 사용할 수 있게 됨.
+obj1에서 func1()을 호출하면?
+
+자바스크립트의 프로토타입 체인(Prototype Chain) 에 의해 func1()을 찾음.
+obj1에는 func1이 없지만, __proto__를 따라 올라가서 Object.prototype.func1을 찾음.
+그래서 정상적으로 "이것은 obj1의 프로토타입에서 선언한 함수입니다."가 출력됨. -->

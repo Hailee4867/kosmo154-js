@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="num1" class="lotto-number">?</div>
+        <div id="num2" class="lotto-number">?</div>
+        <div id="num3" class="lotto-number">?</div>
+        <div id="num4" class="lotto-number">?</div>
+        <div id="num5" class="lotto-number">?</div>
+        <div id="num6" class="lotto-number">?</div>
+    </div>
+    <button id="btn">로또번호 추첨!</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function() {
+            var numbers = []; // 중복 없는 숫자를 저장할 배열
+
+            // 중복 없는 6개의 랜덤 숫자 생성
+            while (numbers.length < 6) {
+                var randomNum = Math.floor(Math.random() * 45) + 1; // 1~45 랜덤 숫자
+                if (!numbers.includes(randomNum)) { // 중복 확인
+                    numbers.push(randomNum); // 중복이 없으면 배열에 추가
+                }
+            }
+
+            // 6개의 로또 번호를 HTML에 적용
+            for (let i = 0; i < 6; i++) {
+                document.getElementById(`num${i + 1}`).textContent = numbers[i];
+            }
+        });
+    </script>
+</body>
+</html>

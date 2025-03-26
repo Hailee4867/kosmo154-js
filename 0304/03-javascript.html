@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Button</title>
+    <script>
+        function showMessage() {
+            document.getElementById('message').innerText = 'Hello world';
+        }
+        function showKoreanMessage() {
+            document.getElementById('message').innerText = '안녕하세요';
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showMessage()">Click me</button>
+    <button onclick="showKoreanMessage()">클릭하세요</button>
+    
+    <p id="message"></p>
+</body>
+</html>

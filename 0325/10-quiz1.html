@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 1: Custom Play/Pause Toggle 버튼 만들기</title>
+
+<style>
+
+    body{font-family: sans-serif; text-align: center;
+    margin-top: 2em;}
+
+    button{padding : 1em;
+    font-size: 15px;}
+</style>
+</head>
+<body>
+    <h1>>문제 1: Custom Play/Pause Toggle</h1>
+    <video id="myVideo" width="640" height="360">
+        <source src="videos/sample1.mp4" type="video/mp4">
+        브라우저가 video 태그를 지원하지 않습니다.
+   </video>
+    <button id="toggleBtn"> play</button>
+
+    <script>
+
+        const video =document.getElementById('myvideo'); 
+        const toggleBtn=document.getElementById('toggleBtn');
+toggleBtn.addEventListener("click", function(){
+    if(video.paused){
+        vidoe.play(); 
+        toggleBtn.innerText='play'; 
+    } else { video.pause()
+        toggleBtn.innerText='pause'; 
+    }
+}); 
+
+video.addEventListener('ended',function(){
+    toggleBtn.innerText='play';
+})
+
+
+</script>
+</body>
+</html>

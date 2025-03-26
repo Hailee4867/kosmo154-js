@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //파라미터 -함수에 전달할 데이터를 담은 변수
+        // 호출시  호출과 동시에 담은 데이터를 넣어주면 해당데이터가 
+        // 파라미터에 선언된 변수에 들어가서 사용할 수 있도록 이동이 된다. 
+    
+      function func1(a){console.log(`전달받은 닶은 : ${a}`)}; 
+
+      func1(5);
+
+
+
+
+      function func2(a,b){console.log(`전달받은 닶은 : ${a} : ${b}`)}; 
+
+      func2(2,5);
+      func2(4);
+      // 위에 경우 4, undefilned 로 선언됨. 
+      
+      func2(undefined,7);
+      func2(6,7,9);
+      // 실제로 선언된 변수의 갯수만 나옴. 따라서 전달받은 값은 6과 7만 나옴 
+      
+
+      function func3( a, ...b){ 
+        console.log(`전달 받은 값은 :${a}, ${b}`); 
+      }
+      func3(6,7,8,9);
+      // 가변적인 데이터 처리받고싶을때는 위방법으로 쓸수있음.
+    //   그치만 결과값은 배열로 나옴.  
+
+
+    func3("a",9, "b", true);
+    // 타입을 고려하지 않아도됨. 
+
+
+    function func4_1(){
+        function func4_2(){ }
+    }
+
+    func3("a",9, "b", tunc(2));
+    //함수안에 함수 넣을수 있음. 
+    </script>
+</body>
+</html>

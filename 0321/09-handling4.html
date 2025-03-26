@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery-3.7.1.min.js"> </script>
+    <script>
+        $(()=> {
+            $("h2").replaceWith("<h3>바뀐 메서드</h3>"); //섹션에서 바뀐 메서드로 바뀜
+            $("<p>Change</p>").replaceAll("div");
+            $("strong").unwrap(); //내가 아닌 나를 감싼 부모태그 
+            $(".ct1").wrap("<div/>");
+            $(".ct2").wrapAll("<div/>");
+            $(".ct2").wrapInner("<h3/>");
+        })
+    </script>
+    <style>
+     div{
+        background-color: aqua;
+     }
+
+    </style>
+</head>
+<body>
+    <!-- section*2>(h2{제목}+div{내용$}*2) -->
+    <section>
+        <h2>제목</h2>
+        <div>내용1</div>
+        <div>내용2</div>
+    </section>
+    <section>
+        
+        <h1 id="title1"<strong>upwrap태그 </strong></section<h1>
+            <stong>"unwrap태그"</stong>
+            <!-- p.ct{내용$}*4 -->
+            <p class="ct">내용1</p>
+            <p class="ct">내용2</p>
+            <p class="ct">내용3</p>
+            <p class="ct">내용4</p>
+        </h1>
+        <h2>제목</h2>
+        <div>내용1</div>
+        <div>내용2</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 맞추기 게임</title>
+</head>
+<body>
+    <h1>숫자 맞추기 게임</h1>
+    <input type="number" name="num1" id="num1">
+    <button id="btn">제출</button>
+    <p id="result"></p>
+
+    <script>
+        var computerNumber = Math.floor(Math.random() * 100) + 1;
+
+        document.getElementById("btn").addEventListener("click", function() {
+            var num1 = parseInt(document.getElementById("num1").value); 
+
+           
+            if (num1 > computerNumber) {
+                document.getElementById("result").textContent = "너무 큽니다.";
+            } else if (num1 < computerNumber) {
+                document.getElementById("result").textContent = "너무 작습니다.";
+            } else {
+                document.getElementById("result").textContent = "정답을 맞췄습니다!";
+            }
+        });
+    </script>
+</body>
+</html>

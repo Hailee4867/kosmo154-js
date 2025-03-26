@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header"></div>
+    <h1>Welcome</h1>
+    <script>
+        const header = document.getElementById("header"); 
+        const newh1 = document.createElement("h1"); // 새로운 h1 요소 생성
+        const wel1 = document.createTextNode("Welcome"); // "Welcome" 텍스트 생성
+        newh1.appendChild(wel1); // h1 요소에 텍스트를 추가
+        header.prepend(newh1); // div#header의 가장 앞에 새로 만든 h1 요소 추가
+    </script>
+</body>
+</html>

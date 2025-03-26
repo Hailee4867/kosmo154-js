@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //length 속성 
+        const arr1=[1,2,3,"a", "b", "c"]; 
+        console.dir(arr1); 
+        //length : 길이? 아이템 갯수?=>배열의 전체길이임 
+        const arr2 = [0,1,2]; 
+        arr2[100]="a";   //이렇게 하지마쎼여... 
+        console.dir(arr2); // 101이라고 나옴...why?
+        
+        //lenth의 직접 조작 -.이렇게 하지마쎼여... 
+        const arr3=[0,1,2]; 
+    arr3.lenth=5;
+ console.dir(arr3); // 5
+
+    </script>
+</body>
+</html>

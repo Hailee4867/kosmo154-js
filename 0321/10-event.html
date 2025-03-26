@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(()=>{
+            $("#btn1").click(function(){
+                alert("버튼1 누름!!");
+            })
+ 
+            $("#btn2").on("click", function(){
+                alert("버튼 2 누름")
+            });
+ 
+            $("#btn3").on({
+                "mouseover focus" :  function(){
+                    $("#btn3").css("background-color","blue");
+                },
+                "mouseout blur" : function(){
+                    $("#btn3").css("background-color","green");
+                }
+            });
+
+            // $("#btn1").click(); // 클릭하자마자 되는거. 
+
+            //예를 들면 마우스오버를 콕 집어서 실행시키고 싶을때 
+            // $("#btn3").trigger("mouseover");
+
+            // 마우스오버 포커스를 지우고 싶을떄 
+
+        // $("#btn3").off("mouseover focus");
+
+        });
+    </script>
+</head>
+<body>
+    <!-- button#btn${버튼$}*4 -->
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+    <button id="btn4">버튼4</button>
+</body>
+</html>

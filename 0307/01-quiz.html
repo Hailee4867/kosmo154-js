@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 홀짝판변기</h1>
+    <input type="text" name="number-input" placeholder="숫자입력">
+    <button id="chkbtn">검사</button>
+     <div id="result"> </div>
+    <script>
+      //1.한번에 모든것을 치려고 하지 마. 
+      // 1-1 버튼이 정상적으로 눌리는지 확인 - console.log('버튼눌림!')메세지 출력
+
+       document.getElementById("chkbtn").addEventListener("click", function(){
+        // console.log("버튼눌림!");
+        //1-2 버튼이정상적으로 눌리고..나서 input엡 입력된 값을 받아서 변수에 저장한다.-저장된 변수의 값을 찍어보기 
+        //1-3 inputvar  저장된 값 나누기 2의 나버지가 0이면 짝수다를 1이면 
+        var inputval= parseInt(document.getElementById("number-input").value); 
+        // console.log(inputval);
+        document.getElementById("result").textContent = ((inputval %2) === 0) ? `${inputval}는 짝수입니다.` : `${inputval}는 홀수입니다.`});
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 변경</title>
+</head>
+
+<body>
+    <img id="image" src="./Images/old.jpg" alt="old image" width="300">
+    <button id="btn">클릭</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function() { 
+            let image = document.getElementById("image"); 
+            image.setAttribute("src", "./Images/new.jpg"); 
+        });
+    </script>
+</body>
+</html>

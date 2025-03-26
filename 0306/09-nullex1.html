@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var firstName = null; 
+       var secondName= undefined'; 
+       var nickName= "";
+
+    //    var firstName = null; 
+    //    var secondName= undefined'; 
+    //    var nickName= "";
+
+    //    firstName=(firstName !== null && firstname !== undefined ) ? a:b
+    //     console.log(firstName || secondName || nickName || '익명의 사용자');
+     console.log(firstName ?? secondName ?? nickName ?? '익명의 사용자'
+      )
+      // 저 물음표 쟤네는 null 이랑 undefined는 패싱함. 
+
+      let height =0; 
+    console.log(height || 100); //100
+    console.log(height ??100); // 0
+</script>
+</body>
+</html>

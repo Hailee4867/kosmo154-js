@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1- default parameter 
+        function func1(a,b) {
+            return a+b;  
+        
+        }
+        console.log(func1(3,4)); // 7 
+
+
+
+
+        function func1(a,b = 1) {
+            return a+b;  
+        
+        }
+        console.log(func1(3)); // 4
+
+        //2- rest parameter 
+        function func2(a, b, c) { 
+            console.log( a, b, c); 
+        }
+
+  func2(2,3,4); 
+
+  ///--rest parameter---------------------------------
+
+  function func2(...param) { 
+            console. log(param); 
+        }
+
+  func2(2,3,4); 
+
+  // 모든 값의 형태를 배열형태로 나오게 함. 
+  // 어떤값이 들어오ㄷ느 커버가능한 function임 .
+
+  //rest parameter2---------------------------------
+
+   function func3(a, b, ...param) { 
+    console. log(a, b); 
+            console. log(param); 
+        }
+
+  func3(2,3,4); 
+
+
+
+
+</script>
+</body>
+</html>

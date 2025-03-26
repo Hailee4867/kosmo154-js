@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="num1" id="num1">
+    <button id="btn">출력</button>
+ 
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            var num1 = parseInt(document.getElementById("num1").value);
+ 
+            var result = "";
+               
+            // if(50 > num1 >= 30){
+            //     result = "입력값은 50과 30사이에 존재합니다";
+            // } 이런 문법은 쓰면 안됨. 
+ 
+            // if(num1 > 50){
+            //     result = "입력값은 50보다 큽니다.";
+            // }else{
+            //     if(num1 > 40 && num1 <= 50){
+            //         result = "입력값은 50과 40 사이에 존재합니다.";
+            //     }else{
+            //         if(num1 > 30 && num1 <= 40){
+            //             result = "입력값은 30과 40 사이에 존재합니다.";
+            //         }else{
+            //             if(num1 > 20 && num1 <= 30){
+            //                 result = "입력값은 20과 30 사이에 존재합니다.";
+            //             }else{
+            //                 result = "입력값은 20 이하입니다.";
+            //             }
+            //         }
+            //     }
+            // }
+ 
+        //     if(num1 > 50){
+        //         result = "입력값은 50보다 큽니다.";
+        //     }else if(num1 > 40 && num1 <= 50){
+        //         result = "입력값은 50과 40 사이에 존재합니다.";
+        //     }else if(num1 > 30 && num1 <= 40){
+        //         result = "입력값은 30과 40 사이에 존재합니다.";
+        //     }else if(num1 > 20 && num1 <= 30){
+        //         result = "입력값은 20과 30 사이에 존재합니다.";
+        //     }else{
+        //         result = "입력값은 20 이하입니다.";
+        //     }
+ 
+        //     alert(result);
+        // });
+
+
+        if(num1 > 50){
+                result = "입력값은 50보다 큽니다.";
+            }else if(num1 > 40 ){
+                result = "입력값은 50과 40 사이에 존재합니다.";
+            }else if(num1 > 30){
+                result = "입력값은 30과 40 사이에 존재합니다.";
+            }else if(num1 > 20 ){
+                result = "입력값은 20과 30 사이에 존재합니다.";
+            }else{
+                result = "입력값은 20 이하입니다.";
+            }
+ 
+            // //상위에는 쳐낼 조건. 그다음조건은 상위조건을 없애고 작성해도됨. 
+            // 왜냐면. 첫번째 조건에서 두번째 조건으로 내려왔다는건 이미 걸러진 조건이니까
+            alert(result);
+        });
+    </script>
+</body>
+</html>
+ 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경색 토글</title>
+    <style>
+        #toggleDiv {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">배경색 변경</button>
+    <div id="toggleDiv"></div>
+    
+    <script>
+        document.getElementById("toggleButton").addEventListener("click", function() {
+            var div = document.getElementById("toggleDiv");
+            div.style.backgroundColor = div.style.backgroundColor === "blue" ? "gray" : "blue";
+        });
+    </script>
+</body>
+</html>

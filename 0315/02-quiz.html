@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body { font-family: sans-serif; padding: 20px; }
+    /* active 클래스가 적용되면 배경색 변화 */
+    .active { background-color: #def; }
+    #status { padding: 10px; border: 1px solid #ccc; }
+    </style>
+<body>
+    <div id="status">상태메세지 </div>
+    <button id="btn">버튼쓰 </button>
+   
+    <script> 
+        const status = document.getElementById("status");
+        const btn = document.getElementById("btn");
+
+        // 버튼 클릭 시 동적 반응을 구현
+        btn.addEventListener("click", function() { 
+            if (!status.classList.contains('active')) {
+                status.classList.add('active'); 
+                console.log(" 어쩌구 저쩌구 ");  // 콘솔 출력
+            } else {
+                console.log("빵상 끼리까랑 ");  // 이미 'active' 클래스가 있을 때 콘솔 출력
+            }
+        });
+    </script>
+</body>
+</html>

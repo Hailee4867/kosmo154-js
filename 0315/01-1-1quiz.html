@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style> 
+  body{font-family: 'Times New Roman', Times, serif; padding : 30px}
+
+  .tooltip{padding: 20px; margin: 3px 0; border: 3px dashed black; }
+
+
+</style>
+<body>
+<div class="tooltip" title="튤팁1">튤팁1  </div>
+<div class="tooltip" title="튤팁2">튤팁1  </div>
+<div class="tooltip" title="튤팁3">튤팁1  </div>
+<div class="tooltip" title="튤팁4">튤팁1  </div>
+
+
+<script>
+
+    const tooltips= document.querySelectorAll('.tooltip'); 
+    tooltip.foreach(function(elem){ 
+       elem.removeAttribute('title')
+
+    });
+
+    consolo.log("타이틀이 삭제되었습니다. ")
+
+
+</script>
+</html>

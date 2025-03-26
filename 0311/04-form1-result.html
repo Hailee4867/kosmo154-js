@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> 폼 제출결과 </h1>
+        <p id="result"> </p>
+    </div>
+
+    <script>
+      var queryString = window.location.search;
+    //   document.getElementById("result").textContent=queryString;
+    //    위에 껄로 했을때는 이걸 가공하기 어려움
+
+    // URL의 param을 가공 처리하는 객체 생성 
+    var urlparams= new URLSearchParams(queryString);
+   
+    // get method를 활용하여 데이터를 받아온다. 
+    var username=urlparams.get("username"); 
+
+    // 결과 출력 요소 선택 
+    document.getElementById("result"). textContent =`전송 받은 username 값 :${username}`;
+
+      
+    </script>
+</body>
+</html>

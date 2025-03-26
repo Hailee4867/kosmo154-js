@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{ 
+        border:1px solid black; 
+    }
+</style>
+<body>
+    <div id="div1">이것은 본문입니다.</div>
+
+    <script>
+document.getElementById("div1").addEventListener("click", function(e){  
+//    target:실제 이벤트가 일어나는 주체대상. (즉, 위에서는 document~ ("div1"))
+    // e.target.style.backgroundColor="lightblue"; // 1번도 도큐먼트 div1
+
+    this.style.backgroundColor="lightblue" //이렇게도 도큐먼트 div1 
+    //ㅇthis 쓸때 arrow펑션못씀.
+});
+
+    </script>
+</body>
+</html>

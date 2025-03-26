@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 폼제출 이벤트</h1>
+    <form  id="fome1" action="./04-form1-result.html" method="get">
+     <label for="username">사용자 이름</label>
+
+    <input type="text" name="username" id="username" placeholder="이름을 입력하세요">
+    <input type="text" name="aaa" id="aaa" placeholder="이름을 입력하세요">
+    <button> 제출하기 </button>
+
+    </form>
+
+    <script>
+     document.getElementById("form1").addEventListener("submit", function(e){
+      e.preventDefault(); // 1.강제로 전송되서 다음페이지로 가는것을 막는것. 이페이지에 그대로 남아있을수 있음.  펑션에 e넣고 
+      // e.prevendefault.();쓰는것. 
+        console.log("여기로 왔나?"); 
+
+        // 1 username 이라고 하는 input 에서 데이터를 받아온다. 
+        var name = document.getElementById("username").value;
+ 
+
+        //1-1 -> document.getelementbyid("username").value 을 다른 변수로 받아오면 됨. 
+        // 2. 공백을 제거한 데이터가 "abc"가 맞다면 다음 페이지로 전송 
+        // 2-1 if문을 통해서 abc 가 맞을 경우,
+        // //2-2 -> 다음 페이지로 전송?? ->  document.getElementById("form1").submit()을 하면 자바스크립트로 
+        // 수행할수있도록 해줌.
+        if(name === "abc"){
+                document.getElementById("form1").submit();
+            }else{
+        //3. 만약 데이터가 "abc"가 아니라면 alert로 " 틀렸습니다"를 출력. 
+        //3-1 ->alert("틀렸습니다"); 
+        alert("틀렸습니다");}
+
+ 
+        
+     });
+
+    </script>
+</body>
+</html>
+
+
+
+<!-- 콘솔 온지 어디서확인? -->

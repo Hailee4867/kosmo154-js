@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   #test-box{width: 300px;padding: 20px;
+border: 5px solid #000;
+margin:14px }
+
+#out-put{width: 400px;
+padding: 30px;height: 300px;}
+
+
+    </style>
+</head>
+<body>
+    <div id="output"> </div>
+    <div id="test-box"> </div>
+<button id="btn">크기측정버튼</button>
+
+<script>
+document.getElementById("btn").addEventListener("click",function(){
+    var box= document.getElementById("test-box"); 
+    var clientw= box.ClientWidth; 
+    var offsetW= box.offsetWidth; 
+
+    var outputHTML= 
+    clientdocument.getElementById(`out-put`).innerHTML=outputHTML; 
+
+    console.log("ClientWidth": ClientWidth);
+    console.log("offsetWidth" :offsetWidth);
+    
+    
+})
+
+</script>
+
+</body>
+</html>

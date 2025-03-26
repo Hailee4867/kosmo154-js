@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     // 객체란? in javascript
+     //객체 안에 모든값들은 key와 value를 가지고 있음.
+     const obj = {
+     val1:"abc",
+     val2:1234,
+     func1:function(){ 
+        console.log("안녕하세요");
+     }
+     };
+     
+     let value1 ="val1"  
+     //위에처럼 하면  console.log(obj[value1]);로 불러 올수 있음. 
+     //벨류의 값이 달라질떄는 저렇게 정의해서 쓰고 아닐경우에는 2번의 형태로 씀.
+     //사용방법 
+
+     console.log(obj.val1);// abc
+     console.log(obj["val2"]);  //1234 2번
+     obj.func1(); //안녕하세요
+    </script>
+</body>
+</html>

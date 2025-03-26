@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    const bottle = { 
+        juice : 50, 
+        open(){ // 함수(X) , 메서드(o)
+            console.log("뚜껑을 연다");
+        }
+
+        //  오픈은 객체 (정의된)안에 있는건 메소드임. 일반적으로 open: function했었는데 업그레이드 되면서 저렇게도 가넝.
+
+    };
+    // 1 
+    // bottle = {
+    //     water :80
+    // };  이렇게는 안나옴. 
+
+ 
+    //2 
+
+    bottle.juice= 80; 
+    console.dir(bottle); 
+    // 안에 있는 속성값이 갱신됨.. 80으로. 
+    // 밖에 있는 갱신이 불가능하지만 안에있는 값에 대한 갱신은 가능함.
+
+  
+    // 3 
+
+    bottle.water=100; 
+    console.dir(bottle); 
+    //보틀에 워터는 없었음....버뜨 예전에 있었던것처럼 나옴..정의 내리지 않았는데도 나옴.
+    // 자바스크립트의 특수성
+    // 자바가 사람 자바..
+
+    //4 작동시키는법. (2가지) 
+    bottle.open();  //이렇게 작동시킬수있음
+    // bottle.["open"]();
+
+// 5 
+
+delete bottle.juice; 
+    </script>
+</body>
+</html>

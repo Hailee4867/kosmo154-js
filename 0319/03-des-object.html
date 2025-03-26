@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.object sprreadㅍ 연산 
+        //삽입연산 
+        // const obj1_1={
+        //     a1=111,  
+        //     b1="abc"
+        // };
+
+        // const obj1_2({...obj1_1, c1:345}); 
+        // // a1: 111,  b1: "abc"}
+        // console.log(obj1_1);
+        // // a1: 111,  b1: "abc", c1:345}
+        // console.log(obj1_2);
+
+    //2. 부분추출1
+
+//     const obj2_1 = {
+//         a1: 123, 
+//         b1: "abc"
+//     }; 
+//     let {a1, b1}=obj2_1; 
+//     console.log(`${a1} ${b1}`); // 123 abc
+
+
+//    //3. 부분추출2
+//    const obj3_1 = {
+//         a1: 123, 
+//         b1: "abc"
+//     }; 
+//     let {a1:c1, b1:d1}=obj2_1; 
+//     console.log(`${c1} ${d1}`);   //  카값이 다를땐. a1:c1이런식으로 맹핑해줘야함.그러면 123 abc 나옴 
+
+
+
+//4. 부분추출3
+// const obj4_1 = {
+//         a1: 123, 
+//         b1: "abc"
+//     }; 
+//     let a1, b1; 
+//     ({a1,b1} = obj4_1);
+//     console.log(`${a1} ${b1}`); //123 abc
+//     //{a1,b1} = obj4_1; 이렇게는 실행 안됨(블록코드). 그래서 ()이렇게 해두면 객체형태로 바ㄱ뀜.
+    
+
+
+    //5. 부분추출4 
+
+// const obj5_1 = { 
+//  a1: 123, 
+//  b1:"abc",
+//  c1:{c1_1:10, c1_2:"z"},
+
+// }
+
+// let {a1, b1,c1 : {c1_1}} = obj5_1;
+
+// console.log(`${a1} ${b1} ${c1_1}`); ///123 abc 10                 
+
+
+
+//6. 부분추출5
+
+// const obj6_1 ={
+// a1: 123, 
+//  b1:"abc",
+//  c1:{c1_1:10, 
+//     c1_2:"z"},
+
+// }
+// let {a1, ...rest1}= obj6_1; 
+// console.log(a1); //123 
+
+
+// console.log(dir(rest1);)
+// //{b1:"abc" , c1:{c1_1, c1_3: "z"}
+
+
+
+//7. 요소수정 
+// const obj7_1 ={ 
+//     a1: 123, b1:"abc"
+// }
+
+// const obj7_2 {...obj7_1, a1: 987}; 
+// console.(obj7_1); //a1:123, b1:"abc"
+// console.(obj7_2); // {a1:987, b1:"abc"}
+
+
+//8.요소삭제 1 
+
+const obj7_1 = { 
+    a1: 123, 
+    b1: "abc", 
+    c1: 456
+};
+
+// 올바른 객체 구조 분해 할당 (괄호가 아니라 중괄호 사용)
+const { a1, ...rest1 } = obj7_1; 
+console.dir(rest1); // { b1: "abc", c1: 456 }
+
+const { b1, c1 } = obj7_1; 
+const obj7_2 = { b1, c1 };
+console.dir(obj7_2); // { b1: "abc", c1: 456 }
+
+    </script>
+</body>
+</html>

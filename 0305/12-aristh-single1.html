@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 단항 연산자 
+
+// 1 
+var x1 =3;
+console.log(-x1); //-3 
+
+//2 
+
+var x2= "4"; 
+console.log(typeof (-x2));
+
+// 타입오브라고 쓰니까 넘버로나옴. 
+
+//3 
+var x3= "3"; 
+console.log(x3);
+console.log(typeof+(x3)); // 1 
+
+//4 
+console.log(+true); //1
+console.log(+false); //0
+cosnole.log(+null); //0
+console.log(+undefined);  // NaN 
+
+
+//5 
+var y1= 3;
+// // 증감연산자의 특징: 연산이 앞에 나오면 연산 후 로직 수행., 
+// 연산이 뒤에 나오면 로직 수행 후 연산 
+conosle.log(++y1); //4  y1= y1+1 
+conosle.log(y1++);// 4
+conosole.log(y1); //5 
+
+var y2= 5
+console.log(--y2); //4 
+console.log(y2--); // 4
+ console.log(y2); // 3 
+
+    </script>
+</body>
+</html>

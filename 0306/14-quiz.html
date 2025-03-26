@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홀짝 검사기</title>
+</head>
+<body> 
+    
+    <input type="text" name="txt1" id="txt1" class="txt1">
+    <button id="btn1">검사</button>
+    <div id="div1"> </div>
+    <script>
+        document.getElementById("btn1").addEventListener("click", function() {
+            // 입력값을 정수로 변환
+            var val1 = parseInt(document.getElementById("txt1").value);
+            var jin = document.createElement("p")
+            // 삼항 연산자를 사용하여 홀짝 판별
+            jin.innerText = (val1 % 2 === 0) ? "짝수입니다" : "홀수입니다";
+            
+            // 결과를 alert로 출력
+            // alert(result);
+            document.getElementById("div1").innerHTML=""
+           document.getElementById("div1").append(jin)
+        });
+    </script>
+    
+</body>
+</html>

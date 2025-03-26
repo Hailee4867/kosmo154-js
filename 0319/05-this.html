@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const obj7_1 = { 
+    a1: 123, 
+    b1: "abc", 
+    c1: 456
+};
+
+// 올바른 객체 구조 분해 할당 (괄호가 아니라 중괄호 사용)
+const { a1, ...rest1 } = obj7_1; 
+console.dir(rest1); // { b1: "abc", c1: 456 }
+
+const { b1, c1 } = obj7_1; 
+const obj7_2 = { b1, c1 };
+console.dir(obj7_2); // { b1: "abc", c1: 456 }
+
+// 1
+console.log(this); // window를 가리킴
+
+// 2
+function func1() {
+    console.log(this); // window
+}
+func1();
+
+// 3
+const obj1 = {
+    a1: 123,
+    b1() {
+        console.log(this); // obj1
+        console.log(this.a1); // 123
+    }
+};
+obj1.b1();
+
+// 4
+const obj2 = {
+    a1: 123,
+    b1() {
+        function func1() {
+            console.log(this); // window
+        }
+        func1();
+    }
+};
+obj2.b1();
+
+// 5
+const obj3 = {
+    a1: 123,
+    obj3_1: {
+        b1: "abc",
+        c1() {
+            console.log(this); // obj3_1
+        }
+    }
+};
+obj3.obj3_1.c1(); // obj3_1
+
+// 6
+// 올바른 메서드명: getElementById (오타 수정 필요)
+document.getElementById("div1").addEventListener("click", function() {
+    console.log(this); // div1
+});
+
+    </script>
+</body>
+</html>

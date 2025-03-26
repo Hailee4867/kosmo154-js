@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    .txt1{ color: red; }
+
+    .txt2{
+        font-suize: 3rem;
+    }
+    .txt3{
+        outline: 2px solid black; 
+    }
+    
+</style>
+</head>
+<p id="p1">안녕하세요. 반갑습니다.</p>
+<button id="btn">토글 p태그 </button>
+<script>
+
+// document.getElementById("p1").classList.add("txt1");
+// document.getElementById("p1").classList.add("txt2");
+// document.getElementById("p1").classList.add("txt3");
+// document.getElementById("p1").classList.remove("txt3");
+
+document.getElementById("btn").addEventListener("click", function(){});  //txt1을 껐다켰다하는거
+// 1. txt1이 있는지 없는지를 확인. 
+//2. 만약에 있으면 txt1을 제거하는 로직생성.
+//3 없으면 txt1을 생성하는 로직 생성. 
+const p1=document.getElementById("p1"); 
+
+//1번 방법 (토글)
+// if(p1.classList.contains("txt1")) {
+// p1.classList.remove("txt1"); }else{ p1.classList.add("txt1");}
+
+
+// 2번 방법↓(토글) 위에껄 간단하게 할수 있음. 
+ 
+
+p1.classList.toggle("txt1");
+
+
+
+
+
+
+// document.getElementById("p1").classList.add("txt1","txt2", "txt3");
+// 위에꺼로 하면 한번에 적용가능. 컬러, 폰트, 아웃라인이 다 나타남. remove 동일 
+
+// // document.getElementById("p1").classList.add 이걸 쓰는 이유는 setsttribute를 중복 사용불가.
+// 기존에 적용했던 기능이 사라지니까. 그래서 이속성을 씀. 따로 따로 리무브를 통해 개별적으로 지울수 있음. 
+
+</script>
+<body>
+    
+</body>
+</html>

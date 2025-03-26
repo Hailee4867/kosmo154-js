@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="txt1" id="txt1">
+     <button id="btn1">나이계산 </button>
+     <div id="div1">  </div>
+  <script>
+   document.getElementById("btn1").addEventListener("click",function(){
+    var val1 = parseInt(document.getElementById("txt1").value);
+            var jin = document.createElement("p")
+            jin.innerText = (val1>=18) ? "성인입니다" :"성인이 아닙니다"; 
+            document.getElementById("div1").innerHTML=""
+            document.getElementById("div1").append(jin)
+        
+   });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="num1" id="num1">
+    <button id="btn">출력</button>
+ 
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            var n = parseInt( document.getElementById("num1").value);
+ 
+            var result = "";
+            switch(n){
+                    switch(randomNumber) {
+                case 0:
+                    document.body.style.backgroundColor = "red";
+                    break;
+                case 1:
+                    document.body.style.backgroundColor = "green";
+                    break;
+                case 2:
+                    document.body.style.backgroundColor = "blue";
+                    break;
+            }
+         
+            alert(result);
+        });
+
+        //if else 처럼 복잡한 조건을 쓰기어려움.동등비교만 가능함. 
+        // switch(n)  과 case 1 이 같을때까지 
+        // 장점은 빠르고 단점은 
+    </script>
+</body>
+</html>
+ 

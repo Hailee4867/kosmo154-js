@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.mystyle{width: 100%;
+padding:25px;
+background-color: coral; 
+color: white; font-family: 25px; 
+box-sizing:border-box; }
+
+</style>
+<body>
+    <button onclick="addfunction()">디자인 삽입</button>
+    <button onclick="removeFunction()">디자인 삭제 </button>
+
+    <div id="mydiv">
+    This is a DIV element.     
+    </div>
+    <script>
+const mydiv=document.getElementById("mydiv"); 
+
+function addfunction(){ 
+   var element=document.getElementById("mydiv");
+    element.classList.add("mystyle"); 
+}
+
+
+function removeFunction(){
+    var element=document.getElementById("mydiv");
+    element.classList.remove("mystyle"); 
+}
+    </script>
+</body>
+</html>

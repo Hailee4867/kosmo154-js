@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>무작위 색상 변경</h1>
+    <button id="btn">배경색 변경</button>
+    <script>
+      document.getElementById("btn").addEventListener("click", function(){
+       var val1= Math.floor(Math.random() * 3);
+       var result = "";
+                 switch(val1){
+                     case 0 :
+                       document.body.style.backgroundColor = "red";
+                        break;
+                     case  1:
+                        document.body.style.backgroundColor = "green";
+                        break;
+                     case 2 :
+                     document.body.style.backgroundColor = "blue";
+                            break;
+                        
+                }
+
+                });
+    </script>
+  </body>
+</html>

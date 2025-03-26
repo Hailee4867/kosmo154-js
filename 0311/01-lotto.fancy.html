@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 귀염뽀짝 마법의 로또 🎀</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap');
+
+        /* 전체 배경 - 핑크 & 반짝이는 느낌 */
+        body {
+            text-align: center;
+            font-family: 'Gaegu', cursive;
+            background: linear-gradient(135deg, #ffccff, #ff99cc);
+            color: white;
+            padding: 20px;
+        }
+
+        /* 제목 스타일 */
+        h1 {
+            font-size: 42px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: white;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        /* 로또 공 스타일 - 귀여운 파스텔 느낌 */
+        .lotto-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .lotto-number {
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            text-align: center;
+            border: 3px solid white;
+            box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.7);
+            opacity: 0;
+            transform: scale(0);
+            font-family: 'Gaegu', cursive;
+        }
+
+        /* 마법 등장 애니메이션 */
+        .appear {
+            animation: appear 0.5s forwards;
+        }
+
+        @keyframes appear {
+            0% { opacity: 0; transform: scale(0); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* 버튼 스타일 - 말랑말랑한 젤리 느낌 */
+        #btn {
+            padding: 12px 35px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #ff66b2, #ff99cc);
+            border: 3px solid white;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+            box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.7);
+            font-family: 'Gaegu', cursive;
+        }
+
+        #btn:hover {
+            background: linear-gradient(135deg, #ff3385, #ff66b2);
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 Haille's lotto 🎀</h1>
+
+    <div class="lotto-container">
+        <div id="num1" class="lotto-number">?</div>
+        <div id="num2" class="lotto-number">?</div>
+        <div id="num3" class="lotto-number">?</div>
+        <div id="num4" class="lotto-number">?</div>
+        <div id="num5" class="lotto-number">?</div>
+        <div id="num6" class="lotto-number">?</div>
+    </div>
+    <button id="btn">🎀 마법의 숫자 뽑기! 🎀</button>
+
+    <audio id="magicSound" src="https://www.fesliyanstudios.com/play-mp3/4387"></audio>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function() {
+            var numbers = [];
+            var magicSound = document.getElementById("magicSound");
+
+            // ✨ 마법 효과음 재생
+            magicSound.currentTime = 0;
+            magicSound.play();
+
+            // 🎀 로또 번호 생성 (중복 없는 6개)
+            while (numbers.length < 6) {
+                var rand = Math.floor(Math.random() * 45) + 1;
+                if (!numbers.includes(rand)) {
+                    numbers.push(rand);
+                }
+            }
+
+            // 🎀 로또 번호 오름차순 정렬
+            numbers.sort((a, b) => a - b);
+
+            // 🎀 랜덤한 파스텔 색상 리스트
+            var colors = ["#ff99cc", "#ffccff", "#ffcce5", "#ffdd99", "#ccffcc", "#ccddff"];
+
+            // 🎀 로또 번호 출력 + 애니메이션 + 랜덤 색상 적용
+            var lottoBalls = document.querySelectorAll(".lotto-number");
+            lottoBalls.forEach((ball, index) => {
+                setTimeout(() => {
+                    ball.textContent = numbers[index]; // 번호 표시
+                    ball.classList.add("appear"); // 마법 애니메이션 실행
+                    ball.style.background = colors[index]; // 랜덤 색상 적용
+                }, index * 500);
+            });
+        });
+    </script>
+</body>
+</html>

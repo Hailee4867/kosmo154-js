@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 5px 0; padding: 5px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+  <ul>
+    <li class="item">아이템1</li>
+    <li class="item">아이템2</li>
+    <li class="item">아이템3</li>
+    <li class="item">아이템4</li>
+  </ul>
+
+  <script>
+    const items = document.querySelectorAll('.item');  // .item 클래스를 가진 모든 li 선택
+    items.forEach(function(item, index) {  // items 배열을 순회하며 각 item과 index 가져오기
+      item.setAttribute('data-index', index);  // 각 item에 data-index 속성 추가
+      item.textContent = `data-index: ${index}`;  // 각 item에 data-index 값을 텍스트로 표시
+    });
+  </script>
+</body>
+</html>

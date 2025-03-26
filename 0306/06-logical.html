@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자바스크립트 특수 연산(자.스에서만 쓰는)
+
+        console.log("cat" && true); //true  캣은 문자열.
+       console.log(!!"cat"); //!!낫연산  true !!이거써서 
+       console.log(!!"") ; // false
+       console.log(!!" ") ; // false(x) 스페이스(공백)도 값이 있음. 
+    //    컴퓨터는 공백을 인식 but 휴먼은 공백 인식하기 어려워서   좌우 공백없애려고 
+    //   " abcd " .trim() 이렇게 해서 공백 없앰.
+
+    console.log(false && "cat"); //false 
+
+    console.log("dog" && "cat");  //cat이 나옴...? 읭? 다른 것들은 T/F 로나오는게맞음. 
+    // 일단 dog은 트루, 앤드연산 다음값도비교하기위해.. 
+    console.log("dog" && false); //false 
+    console.log("true" && "cat"); //cat 
+    console.log("" && true); // "" 공백나옴.. 공백은 false
+    
+
+    console.log(false || "cat"); // cat이 나옴. 
+    // or 문법은 양변중에 하나라도 참이면 참 아니면 거짓.
+    //  좌변이 행이 false 면 우변확인. 
+
+    console.log("dog" || "cat"); // dog 
+
+    console.log("Dog" && " "); // " "
+        console.log("Dog" && ""); // "" ""가 멈춰야되는 시점인거임.
+        console.log("" && "Cat"); // ""
+        console.log(" " && "Cat"); // "Cat"
+        console.log("" && true); // ""
+        console.log("" && false); // ""
+        console.log(" " && true); // true
+        console.log(" " && false); // false
+        console.log(true && ""); // ""
+        console.log(false && ""); // false
+        console.log(true && " "); // " "
+        console.log(false && " "); // false
+
+       console.log("dog" || "cat" || null); //dog 
+
+    //    ispending && list 
+
+    console.log(!!{}); 
+    console.log(!!null); 
+    console.log(!![]);
+
+
+    </script>
+</body>
+</html>
